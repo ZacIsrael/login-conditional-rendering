@@ -25,6 +25,7 @@ function App() {
   return (
     <>
       <div className="container">
+        {/* ternary operator: if isLoggedIn is true, display the h1 tag; otherwise, display the Login component */}
         { isLoggedIn ? <h1>Hello</h1> : <Login />}
       </div>
     </>
