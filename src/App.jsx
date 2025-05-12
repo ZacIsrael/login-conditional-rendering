@@ -26,7 +26,10 @@ function App() {
     <>
       <div className="container">
         {/* ternary operator: if isLoggedIn is true, display the h1 tag; otherwise, display the Login component */}
-        { isLoggedIn ? <h1>Hello</h1> : <Login />}
+        {/* { isLoggedIn ? <h1>Hello</h1> : <Login />} */}
+        {/* if it is at least 6:00 pm (17 is 5:00 pm but I'm not calculating minutes), 
+        ask the user why they are still working; otherwise, render the Login component */}
+        {new Date().getHours() > 17 ? <h1>Why are you still working?</h1> : <Login />}
       </div>
     </>
   );
