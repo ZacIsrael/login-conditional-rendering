@@ -13,19 +13,19 @@ function App() {
   let isLoggedIn = false;
 
   // render HTML elements based on a condition
-  function renderConditionally(){
-    if(isLoggedIn){
-      return <h1>Hello</h1>
-    } else {
-      // prompt the user to login 
-      return <Login />
-    }
-  }
+  // function renderConditionally(){
+  //   if(isLoggedIn){
+  //     return <h1>Hello</h1>
+  //   } else {
+  //     // prompt the user to login 
+  //     return <Login />
+  //   }
+  // }
 
   return (
     <>
       <div className="container">
-        {renderConditionally()}
+        { isLoggedIn ? <h1>Hello</h1> : <Login />}
       </div>
     </>
   );
