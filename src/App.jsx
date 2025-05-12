@@ -12,11 +12,20 @@ function App() {
   // boolean that indicates whether or not a user is logged in
   let isLoggedIn = false;
 
+  // render HTML elements based on a condition
+  function renderConditionally(){
+    if(isLoggedIn){
+      return <h1>Hello</h1>
+    } else {
+      // prompt the user to login 
+      return <Login />
+    }
+  }
+
   return (
     <>
       <div className="container">
-        <h1>Hello</h1>
-        <Login />
+        {renderConditionally()}
       </div>
     </>
   );
